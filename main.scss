@@ -6,6 +6,46 @@ $color-green: #C3E6B7;
 $color-champagne: #F9DCC4;
 $color-seashell: #F8EDEB;
 $color-black: #181F25;
+$color-white: #FFFFFF;
+
+// SHARED
+.padding-15 {
+  padding: 0 15px;
+}
+
+.image-bg {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button-full {
+  background-color: $color-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  padding: 7px 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+
+  &_arrow-icon {
+    height: 16px;
+    width: auto;
+    margin-left: 7px;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.inline-link-black {
+  font-weight: 500;
+  color: $color-black;
+}
+
 
 * {
   margin: 0;
@@ -16,12 +56,110 @@ $color-black: #181F25;
   overflow-x: hidden;
 }
 
-.body {
-  // padding: 0 15px;
-}
-
 .nav {
   background-color: $color-champagne;
   width: 100vw;
   height: 40px;
+  display: flex;
+  align-items: center;
+
+  &-wrapper {
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo,
+  &-menu {
+    height: 25px;
+    width: auto;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+// HOME PAGE
+.home {
+  &__header {
+    background-image: linear-gradient(
+        rgba(24, 31, 37, 0.3), 
+        rgba(24, 31, 37, 0.3)
+      ), url(/images/hero-sand-min.jpg);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+  
+    &-logo {
+      width: 250px;
+      height: auto;
+      margin-top: 50px;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    &-h1 {
+      color: $color-white;
+      font-size: 28px;
+      font-weight: 500;
+      text-align: center;
+      margin: 30px 0;
+    }
+  }
+
+  &__about {
+    background-color: $color-peach;
+
+    &-wrapper {
+      margin-top: 30px;
+    }
+    &-img {
+      width: 100%;
+      height: 300px;
+      border-radius: 7px;
+      background-image: url(images/sophie-portrait-placeholder.jpg);
+    }
+    &-text {
+      padding: 15px;
+    }
+  }
+
+  &__offer {
+    background-color: $color-seashell;
+    padding: 30px 0;
+
+    &-card {
+      &-wrapper {
+        width: 100%;
+      }
+      &-img {
+        border-radius: 10px;
+        width: 60%;
+        height: 120px;
+        margin: auto 0;
+
+        &-1 {
+          background-image: url(images/behandlung-seerose.jpg);
+        }
+
+      }
+      &-body {
+        background-color: $color-white;
+      }
+      &-title {
+        color: $color-peach;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+  }
 }
