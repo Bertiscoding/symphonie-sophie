@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300;1,400;1,500;1,600&display=swap');
+
+// COLORS
+$color-peach: #FEC89A;
+$color-green: #C3E6B7;
+$color-champagne: #F9DCC4;
+$color-seashell: #F8EDEB;
+$color-black: #181F25;
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.body {
+  // padding: 0 15px;
+}
+
+.nav {
+  background-color: $color-champagne;
+  width: 100vw;
+  height: 40px;
+}

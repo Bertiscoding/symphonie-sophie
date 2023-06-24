@@ -1,0 +1,24 @@
+{
+  "name": "symphonie-sophie",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:dev": "sass --watch --embed-source-map main.scss:style.css",
+    "sass:prod": "sass --no-source-map --style compressed main.scss:style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bertiscoding/symphonie-sophie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bertiscoding/symphonie-sophie/issues"
+  },
+  "homepage": "https://github.com/Bertiscoding/symphonie-sophie#readme",
+  "devDependencies": {
+    "sass": "^1.63.6"
+  }
+}
