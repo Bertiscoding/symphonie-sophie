@@ -19,6 +19,7 @@
   color: black;
   text-decoration: none;
   font-weight: 400;
+  width: fit-content;
 }
 .button-full_arrow-icon {
   height: 16px;
@@ -33,6 +34,13 @@
 .inline-link-black {
   font-weight: 500;
   color: #181F25;
+}
+
+.section-title {
+  color: #FEC89A;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
 }
 
 * {
@@ -108,22 +116,52 @@
 }
 .home__offer {
   background-color: #F8EDEB;
-  padding: 30px 0;
+  padding: 50px 0 30px 0;
+}
+.home__offer-card {
+  position: relative;
+  margin: 0 15px;
 }
 .home__offer-card-wrapper {
   width: 100%;
+  margin-bottom: 50px;
 }
 .home__offer-card-img {
   border-radius: 10px;
   width: 60%;
-  height: 120px;
+  height: 130px;
   margin: auto 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .home__offer-card-img-1 {
   background-image: url(images/behandlung-seerose.jpg);
 }
+.home__offer-card-img-2 {
+  background-image: url(images/aetherischeoele-bottles-min.jpg);
+}
+.home__offer-card-img-3 {
+  background-image: url(images/alltag-shelf-min.jpg);
+}
+.home__offer-card-img-4 {
+  background-image: url(images/schwanger-gaensebluemchen-min.jpg);
+}
+.home__offer-card-img-5 {
+  background-image: url(images/schwanger-kerzen-min.jpg);
+}
+.home__offer-card-img-6 {
+  background-image: url(images/hero-sand-min.jpg);
+}
 .home__offer-card-body {
   background-color: #FFFFFF;
+  margin-top: 75px;
+  padding: 75px 15px 30px 15px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .home__offer-card-title {
   color: #FEC89A;
@@ -131,5 +169,86 @@
   font-weight: 500;
   text-align: center;
 }
+.home__offer-card-text {
+  margin: 15px 15px 30px 15px;
+}
+.home__kontakt {
+  margin-top: 50px;
+}
+.home__kontakt-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.home__kontakt-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 15px;
+}
+.home__kontakt-item-icon {
+  width: 16px;
+  height: auto;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+.home__kontakt-item-icon img {
+  width: 100%;
+  height: auto;
+}
+.home__kontakt-item-info {
+  margin-bottom: 0;
+}
+.home__kontakt-item-info-link {
+  color: #C3E6B7;
+  text-decoration: none;
+}
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAWR;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE,kBAlBY;EAmBZ;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AACA;EACE;EACA;;;AAKN;EACE;EACA,OAtCY;;;AA0Cd;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE,kBAtDgB;EAuDhB;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEF;EAEE;EACA;;AAEA;EACE;EACA;;;AAOJ;EACE;EAIA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;;AAIJ;EACE,OArGQ;EAsGR;EACA;EACA;EACA;;AAIJ;EACE,kBAnHU;;AAqHV;EACE;;AAEF;EACE;EACA;EACA;EACA;;AAEF;EACE;;AAIJ;EACE,kBAjIa;EAkIb;;AAGE;EACE;;AAEF;EACE;EACA;EACA;EACA;;AAEA;EACE;;AAIJ;EACE,kBAlJM;;AAoJR;EACE,OA1JM;EA2JN;EACA;EACA%22,%22file%22:%22style.css%22%7D */
+.footer {
+  background-color: #181F25;
+  padding: 30px;
+  margin-top: -5px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-links-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links-item {
+  color: #C3E6B7;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.footer-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer-logo-ss {
+  width: 45px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.footer-logo-ss img {
+  width: 100%;
+  height: auto;
+}
+.footer-logo-doterra {
+  width: 155px;
+  height: auto;
+}
+.footer-logo-doterra img {
+  width: 100%;
+  height: auto;
+}
+.footer-copyright {
+  font-size: 12px;
+  color: #F9DCC4;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAWR;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE,kBAlBY;EAmBZ;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AACA;EACE;EACA;;;AAKN;EACE;EACA,OAvCY;;;AA0Cd;EACE,OA/CY;EAgDZ;EACA;EACA;;;AAIF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE,kBA9DgB;EA+DhB;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEF;EAEE;EACA;;AAEA;EACE;EACA;;;AAOJ;EACE;EAIA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;;AAIJ;EACE,OA7GQ;EA8GR;EACA;EACA;EACA;;AAIJ;EACE,kBA3HU;;AA6HV;EACE;;AAEF;EACE;EACA;EACA;EACA;;AAEF;EACE;;AAIJ;EACE,kBAzIa;EA0Ib;;AAEA;EACE;EACA;;AACA;EACE;EACA;;AAEF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAIJ;EACE,kBAhLM;EAiLN;EACA;EACA;EACA;EACA;EACA;;AAEF;EACE,OA9LM;EA+LN;EACA;EACA;;AAEF;EACE;;AAKN;EACE;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAEF;EACE;EACA;EACA;EACA;;AACA;EACE;EACA;;AAGJ;EACE;;AAEA;EACE,OAnOI;EAoOJ;;;AAOV;EACE,kBAzOY;EA0OZ;EACA;;AAEA;EACE;EACA;;AAIA;EACE;EACA;;AAEF;EACE,OA3PQ;EA4PR;EACA;EACA;;AAKF;EACE;EACA;EACA;;AAEF;EACE;EACA;EACA;;AACA;EACE;EACA;;AAGJ;EACE;EACA;;AACA;EACE;EACA;;AAIN;EACE;EACA,OA3Rc;EA4Rd;EACA%22,%22file%22:%22style.css%22%7D */

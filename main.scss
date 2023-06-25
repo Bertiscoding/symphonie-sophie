@@ -29,6 +29,7 @@ $color-white: #FFFFFF;
   color: black;
   text-decoration: none;
   font-weight: 400;
+  width: fit-content;
 
   &_arrow-icon {
     height: 16px;
@@ -44,6 +45,13 @@ $color-white: #FFFFFF;
 .inline-link-black {
   font-weight: 500;
   color: $color-black;
+}
+
+.section-title {
+  color: $color-peach;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
 }
 
 
@@ -134,25 +142,53 @@ $color-white: #FFFFFF;
 
   &__offer {
     background-color: $color-seashell;
-    padding: 30px 0;
+    padding: 50px 0 30px 0;
 
     &-card {
+      position: relative;
+      margin: 0 15px;
       &-wrapper {
         width: 100%;
+        margin-bottom: 50px;
       }
       &-img {
         border-radius: 10px;
         width: 60%;
-        height: 120px;
+        height: 130px;
         margin: auto 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
 
         &-1 {
           background-image: url(images/behandlung-seerose.jpg);
         }
-
+        &-2 {
+          background-image: url(images/aetherischeoele-bottles-min.jpg);
+        }
+        &-3 {
+          background-image: url(images/alltag-shelf-min.jpg);
+        }
+        &-4 {
+          background-image: url(images/schwanger-gaensebluemchen-min.jpg);
+        }
+        &-5 {
+          background-image: url(images/schwanger-kerzen-min.jpg);
+        }
+        &-6 {
+          background-image: url(images/hero-sand-min.jpg);
+        }
+        
       }
       &-body {
         background-color: $color-white;
+        margin-top: 75px;
+        padding: 75px 15px 30px 15px;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       &-title {
         color: $color-peach;
@@ -160,6 +196,98 @@ $color-white: #FFFFFF;
         font-weight: 500;
         text-align: center;
       }
+      &-text {
+        margin: 15px 15px 30px 15px;
+      }
     }
+  }
+
+  &__kontakt {
+    margin-top: 50px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 15px;
+      }
+      &-icon {
+        width: 16px;
+        height: auto;
+        margin-right: 10px;
+        margin-top: 4px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &-info { 
+        margin-bottom: 0;
+
+        &-link {
+          color: $color-green;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $color-black;
+  padding: 30px;
+  margin-top: -5px;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-links {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    &-item {
+      color: $color-green;
+      text-decoration: none;
+      margin-bottom: 15px;
+      font-size: 12px;
+    }
+  }
+
+  &-logo {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &-ss {
+      width: 45px;
+      height: auto;
+      margin-bottom: 15px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-doterra {
+      width: 155px;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &-copyright {
+    font-size: 12px;
+    color: $color-champagne;
+    text-align: center;
+    margin-top: 30px;
   }
 }
