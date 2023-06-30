@@ -27,26 +27,43 @@ $breakpoint-desktop: 768px;
   background-repeat: no-repeat;
 }
 
-.button-full {
+.button-full,
+.button-full-sm {
   background-color: $color-green;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  padding: 7px 18px;
-  color: black;
+  color: $color-black;
   text-decoration: none;
   font-weight: 400;
   width: fit-content;
 
   &_arrow-icon {
-    height: 16px;
     width: auto;
     margin-left: 7px;
     img {
       height: 100%;
       width: auto;
     }
+  }
+}
+
+.button-full {
+  padding: 7px 18px;
+
+  &_arrow-icon img {
+    height: 16px;
+  }
+}
+
+.button-full-sm {
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
+
+  &_arrow-icon img {
+    height: 10px;
   }
 }
 
@@ -60,6 +77,41 @@ $breakpoint-desktop: 768px;
   font-size: 20px;
   font-weight: 500;
   text-align: center;
+}
+
+.page-header {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  height: 260px;
+  position: relative;
+
+  &-h1 {
+    color: $color-white;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0;
+    max-width: 260px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 48px;
+      max-width: unset;
+    }
+  }
+
+  &-offers {
+    background-image: linear-gradient(
+    rgba(24, 31, 37, 0.6), 
+    rgba(24, 31, 37, 0.6)
+  ), url(/images/behandlung-seerose.jpg);
+  }
 }
 
 
@@ -361,6 +413,41 @@ $breakpoint-desktop: 768px;
       @media (min-width: $breakpoint-desktop) {
         width: 40%;
         margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.products-overview {
+  background-color: $color-seashell;
+
+  &-card {
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 15px;
+    margin: 30px 15px 0 15px;
+
+    &-title {
+      color: $color-peach;
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    &-booking {
+      &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      &-details {
+        font-weight: 600;
+        &-bar {
+          display: inline-block;
+          width: 100px;
+          border-top: 1px dotted $color-black;
+        }
       }
     }
   }
