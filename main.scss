@@ -6,6 +6,62 @@ $color-green: #C3E6B7;
 $color-champagne: #F9DCC4;
 $color-seashell: #F8EDEB;
 $color-black: #181F25;
+$color-white: #FFFFFF;
+
+// MEDIA QUERIES
+$breakpoint-desktop: 768px;
+
+// SHARED
+.container {
+  max-width: 1157px;
+  margin: 0 auto;
+}
+
+.padding-15 {
+  padding: 0 15px;
+}
+
+.image-bg {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button-full {
+  background-color: $color-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  padding: 7px 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  width: fit-content;
+
+  &_arrow-icon {
+    height: 16px;
+    width: auto;
+    margin-left: 7px;
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.inline-link-black {
+  font-weight: 500;
+  color: $color-black;
+}
+
+.section-title {
+  color: $color-peach;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
 
 * {
   margin: 0;
@@ -16,12 +72,351 @@ $color-black: #181F25;
   overflow-x: hidden;
 }
 
-.body {
-  // padding: 0 15px;
-}
-
 .nav {
   background-color: $color-champagne;
   width: 100vw;
   height: 40px;
+  display: flex;
+  align-items: center;
+
+  &-wrapper {
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo,
+  &-menu {
+    height: 25px;
+    width: auto;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  list-style: none;
+  top: -1000%;
+  left: 0;
+  align-items: flex-end;
+  padding: 10px 20px 20px 0;
+  width: 100%;
+  height: auto;
+  background-color: $color-seashell;
+  z-index: 2;
+  transition: all 0.55s ease-in-out;
+  box-shadow: 1px 3px 7px rgba(24, 31, 37, 0.3);
+
+  @media (min-width: $breakpoint-desktop) {
+    align-items: center;
+  }
+}
+.nav-menu.active {
+  top: 40px;
+}
+.nav-item {
+  margin: 10px 0;
+}
+.nav-menu a {
+  color: $color-black;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.hamburger {
+  /*hamburger menu*/
+  cursor: pointer;
+  z-index: 3;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: $color-black;
+  margin: 5px 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+// HOME PAGE
+.home {
+  &__header {
+    background-image: linear-gradient(
+        rgba(24, 31, 37, 0.3), 
+        rgba(24, 31, 37, 0.3)
+      ), url(/images/hero-sand-min.jpg);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+  
+    &-logo {
+      width: 250px;
+      height: auto;
+      margin-top: 50px;
+  
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    &-h1 {
+      color: $color-white;
+      font-size: 28px;
+      font-weight: 500;
+      text-align: center;
+      margin: 30px 0;
+      max-width: 260px;
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 48px;
+        max-width: unset;
+      }
+    }
+  }
+
+  &__about {
+    background-color: $color-peach;
+
+    &-wrapper {
+      margin-top: 30px;
+
+      @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+    }
+    &-img {
+      width: 100%;
+      height: 300px;
+      border-radius: 7px;
+      background-image: url(images/sophie-portrait-placeholder.jpg);
+
+      @media (min-width: $breakpoint-desktop) {
+        width: 40%;
+        margin-bottom: 30px;
+      }
+    }
+    &-text {
+      padding: 15px;
+      @media (min-width: $breakpoint-desktop) {
+        width: 40%;
+      }
+    }
+  }
+
+  &__offer {
+    background-color: $color-seashell;
+    padding: 50px 0 30px 0;
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-card {
+      position: relative;
+      margin: 0 15px;
+
+      &-wrapper {
+        width: 100%;
+        margin-bottom: 50px;
+
+        @media (min-width: $breakpoint-desktop) {
+          width: calc(100% / 3);
+        }
+      }
+
+      &-img {
+        border-radius: 10px;
+        width: 60%;
+        height: 130px;
+        margin: auto 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &-1 {
+          background-image: url(images/behandlung-seerose.jpg);
+        }
+        &-2 {
+          background-image: url(images/aetherischeoele-bottles-min.jpg);
+        }
+        &-3 {
+          background-image: url(images/alltag-shelf-min.jpg);
+        }
+        &-4 {
+          background-image: url(images/schwanger-gaensebluemchen-min.jpg);
+        }
+        &-5 {
+          background-image: url(images/schwanger-kerzen-min.jpg);
+        }
+        &-6 {
+          background-image: url(images/hero-sand-min.jpg);
+        }
+        
+      }
+      &-body {
+        background-color: $color-white;
+        margin-top: 75px;
+        padding: 75px 15px 30px 15px;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &-title {
+        color: $color-peach;
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+      }
+      &-text {
+        margin: 15px 15px 30px 15px;
+      }
+    }
+  }
+
+  &__kontakt {
+    margin-top: 50px;
+
+    &-title {
+      color: $color-peach;
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+
+      @media (min-width: $breakpoint-desktop) {
+        font-size: 48px;
+      }
+    }
+
+    &-wrapper {
+      @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 15px;
+
+      }
+      &-icon {
+        width: 16px;
+        height: auto;
+        margin-right: 10px;
+        margin-top: 4px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &-info { 
+        margin-bottom: 0;
+
+        &-link {
+          color: $color-green;
+          text-decoration: none;
+        }
+      }
+
+    }
+    &-img {
+      width: 100%;
+      height: 300px;
+      border-radius: 7px;
+      background-image: url(images/sophie-portrait-placeholder.jpg);
+
+      @media (min-width: $breakpoint-desktop) {
+        width: 40%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $color-black;
+  padding: 30px;
+  margin-top: -5px;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-links {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    &-item {
+      color: $color-green;
+      text-decoration: none;
+      margin-bottom: 15px;
+      font-size: 12px;
+    }
+  }
+
+  &-logo {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &-ss {
+      width: 45px;
+      height: auto;
+      margin-bottom: 15px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-doterra {
+      width: 155px;
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &-copyright {
+    font-size: 12px;
+    color: $color-champagne;
+    text-align: center;
+    margin-top: 30px;
+  }
 }

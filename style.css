@@ -1,4 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300;1,400;1,500;1,600&display=swap");
+.container {
+  max-width: 1157px;
+  margin: 0 auto;
+}
+
+.padding-15 {
+  padding: 0 15px;
+}
+
+.image-bg {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button-full {
+  background-color: #C3E6B7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  padding: 7px 18px;
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+  width: fit-content;
+}
+.button-full_arrow-icon {
+  height: 16px;
+  width: auto;
+  margin-left: 7px;
+}
+.button-full_arrow-icon img {
+  height: 100%;
+  width: auto;
+}
+
+.inline-link-black {
+  font-weight: 500;
+  color: #181F25;
+}
+
+.section-title {
+  color: #FEC89A;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -12,6 +61,329 @@
   background-color: #F9DCC4;
   width: 100vw;
   height: 40px;
+  display: flex;
+  align-items: center;
+}
+.nav-wrapper {
+  padding: 0 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo, .nav-menu {
+  height: 25px;
+  width: auto;
+}
+.nav-logo img, .nav-menu img {
+  height: 100%;
+  width: auto;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AASR;EACE;EACA;EACA;EACA;EACA;EACA;;;AAOF;EACE,kBAlBgB;EAmBhB;EACA%22,%22file%22:%22style.css%22%7D */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  list-style: none;
+  top: -1000%;
+  left: 0;
+  align-items: flex-end;
+  padding: 10px 20px 20px 0;
+  width: 100%;
+  height: auto;
+  background-color: #F8EDEB;
+  z-index: 2;
+  transition: all 0.55s ease-in-out;
+  box-shadow: 1px 3px 7px rgba(24, 31, 37, 0.3);
+}
+@media (min-width: 768px) {
+  .nav-menu {
+    align-items: center;
+  }
+}
+
+.nav-menu.active {
+  top: 40px;
+}
+
+.nav-item {
+  margin: 10px 0;
+}
+
+.nav-menu a {
+  color: #181F25;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.hamburger {
+  /*hamburger menu*/
+  cursor: pointer;
+  z-index: 3;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #181F25;
+  margin: 5px 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.home__header {
+  background-image: linear-gradient(rgba(24, 31, 37, 0.3), rgba(24, 31, 37, 0.3)), url(/images/hero-sand-min.jpg);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.home__header-logo {
+  width: 250px;
+  height: auto;
+  margin-top: 50px;
+}
+.home__header-logo img {
+  width: 100%;
+  height: auto;
+}
+.home__header-h1 {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  margin: 30px 0;
+  max-width: 260px;
+}
+@media (min-width: 768px) {
+  .home__header-h1 {
+    font-size: 48px;
+    max-width: unset;
+  }
+}
+.home__about {
+  background-color: #FEC89A;
+}
+.home__about-wrapper {
+  margin-top: 30px;
+}
+@media (min-width: 768px) {
+  .home__about-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.home__about-img {
+  width: 100%;
+  height: 300px;
+  border-radius: 7px;
+  background-image: url(images/sophie-portrait-placeholder.jpg);
+}
+@media (min-width: 768px) {
+  .home__about-img {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+}
+.home__about-text {
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  .home__about-text {
+    width: 40%;
+  }
+}
+.home__offer {
+  background-color: #F8EDEB;
+  padding: 50px 0 30px 0;
+}
+.home__offer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home__offer-card {
+  position: relative;
+  margin: 0 15px;
+}
+.home__offer-card-wrapper {
+  width: 100%;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .home__offer-card-wrapper {
+    width: 33.3333333333%;
+  }
+}
+.home__offer-card-img {
+  border-radius: 10px;
+  width: 60%;
+  height: 130px;
+  margin: auto 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.home__offer-card-img-1 {
+  background-image: url(images/behandlung-seerose.jpg);
+}
+.home__offer-card-img-2 {
+  background-image: url(images/aetherischeoele-bottles-min.jpg);
+}
+.home__offer-card-img-3 {
+  background-image: url(images/alltag-shelf-min.jpg);
+}
+.home__offer-card-img-4 {
+  background-image: url(images/schwanger-gaensebluemchen-min.jpg);
+}
+.home__offer-card-img-5 {
+  background-image: url(images/schwanger-kerzen-min.jpg);
+}
+.home__offer-card-img-6 {
+  background-image: url(images/hero-sand-min.jpg);
+}
+.home__offer-card-body {
+  background-color: #FFFFFF;
+  margin-top: 75px;
+  padding: 75px 15px 30px 15px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home__offer-card-title {
+  color: #FEC89A;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.home__offer-card-text {
+  margin: 15px 15px 30px 15px;
+}
+.home__kontakt {
+  margin-top: 50px;
+}
+.home__kontakt-title {
+  color: #FEC89A;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .home__kontakt-title {
+    font-size: 48px;
+  }
+}
+@media (min-width: 768px) {
+  .home__kontakt-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.home__kontakt-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.home__kontakt-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 15px;
+}
+.home__kontakt-item-icon {
+  width: 16px;
+  height: auto;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+.home__kontakt-item-icon img {
+  width: 100%;
+  height: auto;
+}
+.home__kontakt-item-info {
+  margin-bottom: 0;
+}
+.home__kontakt-item-info-link {
+  color: #C3E6B7;
+  text-decoration: none;
+}
+.home__kontakt-img {
+  width: 100%;
+  height: 300px;
+  border-radius: 7px;
+  background-image: url(images/sophie-portrait-placeholder.jpg);
+}
+@media (min-width: 768px) {
+  .home__kontakt-img {
+    width: 40%;
+    margin-bottom: 30px;
+  }
+}
+
+.footer {
+  background-color: #181F25;
+  padding: 30px;
+  margin-top: -5px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-links-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links-item {
+  color: #C3E6B7;
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+.footer-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer-logo-ss {
+  width: 45px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.footer-logo-ss img {
+  width: 100%;
+  height: auto;
+}
+.footer-logo-doterra {
+  width: 155px;
+  height: auto;
+}
+.footer-logo-doterra img {
+  width: 100%;
+  height: auto;
+}
+.footer-copyright {
+  font-size: 12px;
+  color: #F9DCC4;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AAcR;EACE;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE,kBA1BY;EA2BZ;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AACA;EACE;EACA;;;AAKN;EACE;EACA,OA/CY;;;AAkDd;EACE,OAvDY;EAwDZ;EACA;EACA;;;AAIF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE,kBAtEgB;EAuEhB;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAEF;EAEE;EACA;;AAEA;EACE;EACA;;;AAKN;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA,kBAzGe;EA0Gf;EACA;EACA;;AAEA;EAhBF;IAiBI;;;;AAGJ;EACE;;;AAEF;EACE;;;AAEF;EACE,OAxHY;EAyHZ;EACA;EACA;;;AAGF;AACE;EACA;EACA;;;AAEF;EACE;EACA;EACA;EACA,kBAvIY;EAwIZ;EACA;EACA;;;AAEF;EACE;;;AAEF;EACE;;;AAEF;EACE;;;AAKA;EACE;EAIA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAEA;EACE;EACA;;AAIJ;EACE,OA9KQ;EA+KR;EACA;EACA;EACA;EACA;;AAEA;EARF;IASI;IACA;;;AAKN;EACE,kBAlMU;;AAoMV;EACE;;AAEA;EAHF;IAII;IACA;IACA;IACA;;;AAGJ;EACE;EACA;EACA;EACA;;AAEA;EANF;IAOI;IACA;;;AAGJ;EACE;;AACA;EAFF;IAGI;;;AAKN;EACE,kBA/Na;EAgOb;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAEA;EACE;EACA;;AAEA;EAJF;IAKI;;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAEF;EACE;;AAIJ;EACE,kBAjRM;EAkRN;EACA;EACA;EACA;EACA;EACA;;AAEF;EACE,OA/RM;EAgSN;EACA;EACA;;AAEF;EACE;;AAKN;EACE;;AAEA;EACE,OA9SQ;EA+SR;EACA;EACA;;AAEA;EANF;IAOI;;;AAKF;EADF;IAEI;IACA;IACA;;;AAIJ;EACE;EACA;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;;AACA;EACE;EACA;;AAGJ;EACE;;AAEA;EACE,OAxVI;EAyVJ;;AAKN;EACE;EACA;EACA;EACA;;AAEA;EANF;IAOI;IACA;;;;AAMR;EACE,kBA1WY;EA2WZ;EACA;;AAEA;EACE;EACA;;AAIA;EACE;EACA;;AAEF;EACE,OA5XQ;EA6XR;EACA;EACA;;AAKF;EACE;EACA;EACA;;AAEF;EACE;EACA;EACA;;AACA;EACE;EACA;;AAGJ;EACE;EACA;;AACA;EACE;EACA;;AAIN;EACE;EACA,OA5Zc;EA6Zd;EACA%22,%22file%22:%22style.css%22%7D */
