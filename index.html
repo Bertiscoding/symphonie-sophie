@@ -8,21 +8,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="home">
+
+  <!-- <div class="nav-menu"><img src="images/icons/menu.svg" alt="menu icon"></div> -->
   <nav class="nav">
-   <div class="nav-wrapper">
-    <div class="nav-logo"><img src="images/symphonie-sophie-logo-sm_black.svg" alt="Symphonie Sophie Logo"></div>
-    <div class="nav-menu"><img src="images/icons/menu.svg" alt="menu icon"></div>
+   <div class="nav-wrapper container">
+    <a href="/" class="nav-logo"><img src="images/symphonie-sophie-logo-sm_black.svg" alt="Symphonie Sophie Logo"></a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a class="nav-link" href="#">Massagen & Behandlungen</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Ätherische Öle</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Balance im Alltag</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Schwangere & Stillende</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Gutscheine</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Preise</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Häufige Fragen</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
    </div>
   </nav>
 
   <header class="home__header image-bg">
     <div class="home__header-logo"><img src="images/symphonie-sophie-logo-lg_white.svg" alt=""></div>
-    <h1 class="home__header-h1">Massagen &</br>Aroma Beratung</h1>
+    <h1 class="home__header-h1">Massagen & Aroma Beratung</h1>
     <a href="#" class="button-full">Alle Behandlungen <span class="button-full_arrow-icon"><img src="images/icons/arrow-right-solid.svg" alt=""></span></a>
   </header>
 
   <section class="home__about padding-15">
-    <div class="home__about-wrapper">
+    <div class="home__about-wrapper container">
       <div class="home__about-img image-bg"></div>
       <p class="home__about-text">
         Hallo, ich bin Sophie!<br/>
@@ -35,7 +51,7 @@
   </section>
 
   <section class="home__offer padding-15">
-    <div class="home__offer-wrapper">
+    <div class="home__offer-wrapper container">
 
       <div class="home__offer-card-wrapper">
         <div class="home__offer-card">
@@ -119,26 +135,30 @@
   </section>
 
   <section class="home__kontakt" id="kontakt">
-    <h3 class="section-title">Kontakt</h3>
-    <div class="home__kontakt-item-wrapper">
-      <div class="home__kontakt-item">
-        <span class="home__kontakt-item-icon"><img src="images/icons/ss-champagne.svg" alt="Symphonie Sophie Logo peach"></span>
-        <p class="home__kontakt-item-info">Sophie Schmidt</p>
+    <div class="home__kontakt-wrapper">
+      <div class="home__kontakt-container">
+        <h3 class="home__kontakt-title">Kontakt</h3>
+        <div class="home__kontakt-item-wrapper">
+          <div class="home__kontakt-item">
+            <span class="home__kontakt-item-icon"><img src="images/icons/ss-champagne.svg" alt="Symphonie Sophie Logo peach"></span>
+            <p class="home__kontakt-item-info">Sophie Schmidt</p>
+          </div>
+          <div class="home__kontakt-item">
+            <span class="home__kontakt-item-icon"><img src="images/icons/map.svg" alt="map pin icon"></span>
+            <p class="home__kontakt-item-info">12049 Berlin</p>
+          </div>
+          <div class="home__kontakt-item">
+            <span class="home__kontakt-item-icon"><img src="images/icons/mail.svg" alt="envelope icon"></span>
+            <a  href="mailto:hallo@symphonie-sophie.de" class="home__kontakt-item-info-link">hallo@symphonie-sophie.de</a>
+          </div>
+          <div class="home__kontakt-item">
+            <span class="home__kontakt-item-icon"><img src="images/icons/instagram.svg" alt="instagram icon"></span>
+            <a  href="#" class="home__kontakt-item-info-link">@_symphonie_sophie</a>
+          </div>
+        </div>
       </div>
-      <div class="home__kontakt-item">
-        <span class="home__kontakt-item-icon"><img src="images/icons/map.svg" alt="map pin icon"></span>
-        <p class="home__kontakt-item-info">12049 Berlin</p>
-      </div>
-      <div class="home__kontakt-item">
-        <span class="home__kontakt-item-icon"><img src="images/icons/mail.svg" alt="envelope icon"></span>
-        <a  href="mailto:hallo@symphonie-sophie.de" class="home__kontakt-item-info-link">hallo@symphonie-sophie.de</a>
-      </div>
-      <div class="home__kontakt-item">
-        <span class="home__kontakt-item-icon"><img src="images/icons/instagram.svg" alt="instagram icon"></span>
-        <a  href="#" class="home__kontakt-item-info-link">@_symphonie_sophie</a>
-      </div>
+      <div class="home__kontakt-img image-bg"></div>
     </div>
-    <div class="home__kontakt-img"><img src="images/sophie-portrait-placeholder.jpg" alt="Sophie Schmidt Massagen Berlin"></div>
   </section>
 
   <footer class="footer">
@@ -157,5 +177,7 @@
     </div>
     <p class="footer-copyright">&copy; Sophie Schmidt 2023</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
