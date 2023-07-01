@@ -130,6 +130,8 @@ $breakpoint-desktop: 768px;
   height: 40px;
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 3;
 
   &-wrapper {
     padding: 0 15px;
@@ -153,9 +155,9 @@ $breakpoint-desktop: 768px;
 .nav-menu {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   list-style: none;
-  top: -1000%;
+  top: -420px;
   left: 0;
   align-items: flex-end;
   padding: 10px 20px 20px 0;
@@ -420,12 +422,13 @@ $breakpoint-desktop: 768px;
 
 .products-overview {
   background-color: $color-seashell;
+  padding: 30px 0;
 
   &-card {
     background-color: $color-white;
     border-radius: 3px;
-    padding: 15px;
-    margin: 30px 15px 0 15px;
+    padding: 15px 30px;
+    margin: 15px 15px 30px 15px;
 
     &-title {
       color: $color-peach;
@@ -434,6 +437,7 @@ $breakpoint-desktop: 768px;
       text-align: center;
       margin-bottom: 15px;
     }
+
     &-booking {
       &-container {
         display: flex;
@@ -443,10 +447,15 @@ $breakpoint-desktop: 768px;
       }
       &-details {
         font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        align-items: baseline;
         &-bar {
-          display: inline-block;
-          width: 100px;
+          display: inline-flex;
           border-top: 1px dotted $color-black;
+          flex-grow: 1;
+          margin: 0 5px;
         }
       }
     }
