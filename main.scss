@@ -430,12 +430,21 @@ $breakpoint-desktop: 768px;
     padding: 15px 30px;
     margin: 15px 15px 30px 15px;
 
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+
     &-title {
       color: $color-peach;
       font-size: 20px;
       font-weight: 500;
       text-align: center;
       margin-bottom: 15px;
+
+      @media (min-width: $breakpoint-desktop) {
+        text-align: left;
+      }
     }
 
     &-booking {
@@ -445,17 +454,34 @@ $breakpoint-desktop: 768px;
         justify-content: space-between;
         margin-top: 30px;
       }
+
+      &-description {
+        @media (min-width: $breakpoint-desktop) {
+          width: 60%;
+        }
+      }
+  
       &-details {
         font-weight: 600;
         display: flex;
         justify-content: space-between;
         width: 70%;
         align-items: baseline;
+
         &-bar {
           display: inline-flex;
           border-top: 1px dotted $color-black;
           flex-grow: 1;
           margin: 0 5px;
+        }
+
+        &-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          @media (min-width: $breakpoint-desktop) {
+            width: 30%;
+          }
         }
       }
     }
